@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Pacifico&family=Playpen+Sans:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Pacifico&family=Playpen+Sans:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  font-family: "Playpen Sans", cursive;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 18px;
+  font-family: "Jacques Francois Shadow", serif;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  font-family: "Playpen Sans", cursive;
+  transition: all 0.2s ease-in;
+}
+
+nav ul li a:hover {
+  color: #ea0400;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: url('../images/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  box-shadow: #8c38f348 0px 2px 8px 0px;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1); /* Dark overlay */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: "Jacques Francois Shadow", serif;
+}
+
+h2 {
+  font-size: 16px;
+  font-family: "Playpen Sans", cursive;
+  color: #323f4c;
+  letter-spacing: 1px;
+}
+
+.read-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #f44336;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #ea0400;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.scroll-down span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+  margin: 5px 0;
+  animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+  0% {
+      opacity: 0;
+      transform: translateY(-10px) rotate(45deg);
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(10px) rotate(45deg);
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  background-color: #f44336;
+  margin: 5px;
+  font-family: "Ubuntu", sans-serif;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #ea0400;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: #f44336;
+  border-color: #f44336;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn.secondary:hover {
+  background-color: #ea0400;
+  color: #fff;
+}
+
+/* Marquee Image Gallery */
+.gallery {
+  padding: 50px 0;
+  background-color: #fffafa65;
+}
+
+marquee {
+  display: flex;
+  padding: 10px 0;
+}
+
+marquee img {
+  margin: 0 10px;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+marquee img:hover {
+  transform: scale(1.05);
+  box-shadow: #000 1px 1px 5px;
+}
+
+marquee:hover {
+  animation-play-state: paused;
+  /* CSS hover behavior */
+}
+
+/* Featured Blog Section */
+
+.feature-post {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 70vh;
+  margin: 100px 20px;
+}
+
+.feature-post-img {
+  padding: 20px;
+  margin: 0px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  height: 50%;
+  border: 1px solid #000000;
+}
+
+.featured {
+  padding: 20px;
+  width: 40%;
+}
+
+.featured h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  font-family: "Jacques Francois Shadow", serif;
+}
+
+.feature-post-title {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.featured p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.featured a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #f44336;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.featured a:hover {
+  background-color: #ea0400;
+}
+
+.feature-post-img {
+  width: 40%;
+  height: 80%;
+}
+
+/* Subscribe Section */
+.subscribe {
+  text-align: left;
+  padding: 50px 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-around;
+  background: url('../images/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  box-shadow: #8c38f348 0px 2px 8px 0px;
+}
+
+.subscribe h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  font-family: "Jacques Francois Shadow", serif;
+}
+
+.subscribe p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.subscribe-input:focus {
+  border-color: #ea0400;
+}
+
+.subscribe-btn {
+  padding: 14px;
+  height: 10%;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  background-color: #f44336;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #ea0400;
+}
+
+/* Testimonials Section */
+.testimonials {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  margin: 80px 80px;
+}
+
+.testimonials h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  font-family: "Jacques Francois Shadow", serif;
+}
+
+/* Flex container for testimonials */
+.testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  /* Allows wrapping on smaller screens */
+}
+
+.testimonial-box {
+  background-color: white;
+  padding: 20px;
+  flex: 1;
+  /* Each box takes up equal space */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px -6px #f44336;
+  margin: 10px;
+  max-width: 30%;
+
+}
+
+.testimonial-box p {
+  font-size: 1.1em;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.testimonial-box h4 {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+
+.testimonial-box span {
+  font-size: 1em;
+  color: #999;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .testimonial-box {
+    max-width: 100%;
+    /* Full width on smaller screens */
+  }
+
+  .testimonial-container {
+    flex-direction: column;
+    /* Stack boxes vertically on small screens */
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 5px 50px;
+  background-color: #333;
+  color: #fff;
+}
+
+footer a {
+  color: #f44336;
+  text-decoration: none;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Blog Post</div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="./readBlogs.php">Blogs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth">
+            <a href="./login.html" class="btn">Login</a>
+            <a href="./register.html" class="btn secondary">Register</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Blog</h1>
+            <h2>"Discover Inspiring Stories & Insights"</h2>
+            <a href="./readBlogs.php" class="read-btn">Start Reading</a>
+        </div>
+        <div class="scroll-down">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Marquee Gallery Section -->
+    <div class="gallery">
+        <!-- First Marquee (Right to Left) -->
+        <marquee class="moving-img" behavior="alternate" direction="left" scrollamount="10" onmouseover="this.stop();"
+            scrolldelay="5" onmouseout="this.start();">
+            <img src="../images/image1.webp" alt="Image 1">
+            <img src="../images/image2.jpg" alt="Image 2">
+            <img src="../images/image3.jpg" alt="Image 3">
+            <img src="../images/image4.jpg" alt="Image 4">
+            <img src="../images/image5.jpg" alt="Image 5">
+            <img src="../images/image6.jpg" alt="Image 6">
+            <img src="../images/image7.jpg" alt="Image 7">
+        </marquee>
+
+        <!-- Second Marquee (Left to Right) -->
+        <marquee behavior="alternate" direction="right" scrollamount="12" onmouseover="this.stop();"
+            onmouseout="this.start();" scrolldelay="10">
+            <img src="../images/image9.jpg" alt="Image 9">
+            <img src="../images/image10.jpg" alt="Image 10">
+            <img src="../images/image11.jpg" alt="Image 11">
+            <img src="../images/image12.jpg" alt="Image 12">
+            <img src="../images/image13.jpg" alt="Image 13">
+            <img src="../images/image14.jpg" alt="Image 14">
+            <img src="../images/image15.jpg" alt="Image 15">
+            <img src="../images/image16.jpg" alt="Image 16">
+        </marquee>
+    </div>
+
+    <!-- Featured Blog Section -->
+    <section class="feature-post">
+        <div class="feature-post-img">
+            <img src="../images/image17.jpg" alt="Image 17">
+        </div>
+        <div class="line"></div>
+        <div class="featured">
+            <h2>Feature Post</h2>
+            <p class="feature-post-title">The Invention of the Printing Press</p>
+            <p>The invention of the printing press by Johannes Gutenberg in 1440 revolutionized communication and
+                knowledge sharing across Europe. It made books more accessible and affordable, leading to the spread of
+                ideas and the Renaissance. This groundbreaking invention marked the dawn of the modern information age.
+            </p>
+            <a href="#">Read More</a>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <div class="subscribe">
+        <div class="content-sub">
+            <h3>Stay up to date with our latest blog posts</h3>
+            <p>Subscribe to our newsletter to receive notifications about new blog posts, updates, and exclusive
+                content.
+            </p>
+        </div>
+        <a href="#" class="btn">Subscribe</a>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-box">
+                <p>"This blog is a fantastic resource for staying updated on industry trends. I look forward to every
+                    new post!"</p>
+                <h4>Jane Doe</h4>
+                <span>Marketing Specialist</span>
+            </div>
+            <div class="testimonial-box">
+                <p>"I’ve learned so much from these articles, and the insights provided are practical and easy to
+                    apply."</p>
+                <h4>John Smith</h4>
+                <span>Freelance Writer</span>
+            </div>
+            <div class="testimonial-box">
+                <p>"An excellent blog that offers valuable content. I highly recommend subscribing to their newsletter!"
+                </p>
+                <h4>Sarah Johnson</h4>
+                <span>Content Strategist</span>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Blog | <a href="#">Privacy Policy</a> | Made by Raghav Gupta</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+.blog-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.blog-card {
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 450px;
+    /* Fixed height for the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-card-content {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-card-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #000;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blog-card-content p {
+    margin: 10px 0;
+    font-family: "Ubuntu", sans-serif;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.blog-author {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.blog-author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.author-details {
+    font-size: 0.85rem;
+    color: #666;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.author-details span {
+    display: block;
+}
+
+.author {
+    font-weight: 600;
+    color: #000;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    background-color: #f44336;
+    color: #fff;
+    text-align: center;
+    padding: 10px 15px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #ea0400;
+}
+
+.other-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-section {
+    padding: 20px;
+}

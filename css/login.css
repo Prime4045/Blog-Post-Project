@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.container {
+    position: relative;
+    width: 420px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    height: 60%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-family: "Jacques Francois Shadow", serif;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: "Playpen Sans", cursive;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #ea3330;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: -5px;
+    display: none;
+}
+
+.toggle-btn {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.toggle-btn a {
+    text-decoration: none;
+    color: #007bff;
+    font-family: "Ubuntu", sans-serif;
+    cursor: pointer;
+}
+
+.toggle-btn a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+    padding: 5px 0;
+    color: #ea3330;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+.success {
+    color: green;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    font-size: 0.9em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
