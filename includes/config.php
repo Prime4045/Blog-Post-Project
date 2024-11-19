@@ -75,5 +75,44 @@ if (!$table_check_result || mysqli_num_rows($table_check_result) == 0) {
     }
 }
 
-// Do NOT close the connection here, as it will be needed elsewhere in your application
-// mysqli_close($conn);
+// Check if 'messages' table exists, and create it if not
+$table_check_query = "SHOW TABLES LIKE 'messages'";
+$table_check_result = mysqli_query($conn, $table_check_query);
+
+if (!$table_check_result || mysqli_num_rows($table_check_result) == 0) {
+    $create_messages_table = "
+    CREATE TABLE messages (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        email VARCHAR(100) NOT NULL,
+        subject VARCHAR(255) NOT NULL,
+        message TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )";
+    if (!mysqli_query($conn, $create_messages_table)) {
+        error_log('Error creating messages table: ' . mysqli_error($conn));
+        die('Error creating messages table.');
+    }
+}
+
+// Check if 'comments' table exists, and create it if not
+$table_check_query = "SHOW TABLES LIKE 'comments'";
+$table_check_result = mysqli_query($conn, $table_check_query);
+
+if (!$table_check_result || mysqli_num_rows($table_check_result) == 0) {
+    $create_comments_table = "
+    CREATE TABLE comments (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        post_id INT NOT NULL,
+        username VARCHAR(50) NOT NULL,
+        comment TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
+    )";
+    if (!mysqli_query($conn, $create_comments_table)) {
+        error_log('Error creating comments table: ' . mysqli_error($conn));
+        die('Error creating comments table.');
+    }
+}
+
+// Connection remains open for further use

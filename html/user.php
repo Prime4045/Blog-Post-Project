@@ -54,8 +54,7 @@ if ($result && mysqli_num_rows($result) > 0) {
             <a href="./user.php"><i class='bx bx-home'></i><span>Dashboard</span></a>
             <a href="#"><i class='bx bx-user'></i><span>Profile</span></a>
             <a href="./crudBlogs.php"><i class='bx bx-book'></i><span>My Blogs</span></a>
-            <a href="#"><i class='bx bx-message'></i><span>Messages</span></a>
-            <a href="#"><i class='bx bx-cog'></i><span>Settings</span></a>
+            <a href="./comment.php"><i class='bx bx-message'></i><span>Comments</span></a>
             <a href="../pages/logout.php"><i class='bx bx-log-out'></i><span>Logout</span></a>
         </div>
     </div>

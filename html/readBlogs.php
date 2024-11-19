@@ -84,10 +84,10 @@ function timeAgo($time)
 
         .search-bar input[type="text"] {
             padding: 10px;
-            width: 300px;
+            width: 50vw;
             /* Set a fixed width for the input */
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 10px;
             font-size: 16px;
         }
 
@@ -122,6 +122,7 @@ function timeAgo($time)
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             /* Responsive grid */
             gap: 20px;
+            margin: 40px;
             /* Space between cards */
         }
 
@@ -174,9 +175,9 @@ function timeAgo($time)
         <nav>
             <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="./about.html">About</a></li>
                 <li><a href="./readBlogs.php">Blogs</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
         <div class="auth">
@@ -211,7 +212,8 @@ function timeAgo($time)
                                             <span><?php echo timeAgo($post['created_at']); ?></span>
                                         </div>
                                     </div>
-                                    <a href="#" class="read-more-btn">Read More</a>
+                                    <a href="./readView.php?id=<?php echo $post['id']; ?>" class="read-more-btn">Read More</a>
+
                                 </div>
                             </div>
                         </div>
